@@ -13,10 +13,9 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        #choose{
-            display: flex;
-            flex-direction: row;
-            justify-content:space-evenly;
+        html{
+            height: 100%;
+            background: linear-gradient(35deg, #3ab3b4, #fd1d1d, #6045fc);
         }
         #ImgAlex{
             border-radius: 50%;
@@ -24,19 +23,48 @@
         #ImgMax{
             border-radius: 50%;
         }
+        .animation{
+            position: fixed;
+            animation-name: bounce;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        #alex {
+            left: 27%;
+            animation-timing-function: ease-out;
+        }
+        #max {
+            left: 56%;
+            animation-timing-function: ease-out;
+        }
+
+        @keyframes bounce {
+            0% {
+             top: 200px;
+            }
+            50% {
+              top: 400px;
+              transform: scale(0.5);
+              opacity: 0.5;
+            }
+            100% {
+              top: 200px;
+            }
+        }
         
         
     </style>
 <header>
+<div class="choose">
     <h1 id="welcome">Welcome to <bold>23 is life</bold></h1>
-<div id="choose">
 
-    <div class="alex">
-        <img src="alex.png" alt="alex" id="ImgAlex">
+
+    <div class="animation" id="alex">
+        <a href="alex.html"><img src="alex.png" alt="alex" id="ImgAlex"></a>
     </div>
 
-    <div class="max">
-        <img src="max.png" alt="max" id="ImgMax">
+    <div class="animation" id="max">
+        <a href="max.html"><img src="max.png" alt="max" id="ImgMax"></a>
     </div>
 </div>
 </header>
