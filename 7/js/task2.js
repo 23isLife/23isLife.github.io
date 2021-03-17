@@ -44,8 +44,8 @@ function regretConfirm() {
     if (regret === true) {
         randomNumberValue = randomNumber(0,maxRandomNumber)
         possiblePrize()
-        number = parseInt(prompt('Choose a roulette pocket number from 0 to'+maxRandomNumber
-        +'\nAttemps left: '+attempts+'\nTotal prize: '+bank+'$\n Possible prize on current attempt:'
+        number = parseInt(prompt('Choose a roulette pocket number from 0 to '+maxRandomNumber
+        +'\nAttemps left: '+attempts+'\nTotal prize: '+bank+'$\nPossible prize on current attempt:'
         +possiblePrizeWin+'$'))
         playGame()
     } else {
@@ -56,8 +56,8 @@ function regretConfirm() {
 function userNumber() {
     possiblePrize()
     if (regret===true) {
-        number = parseInt(prompt('Choose a roulette pocket number from 0 to'+maxRandomNumber
-        +'\nAttemps left: '+attempts+'\nTotal prize: '+bank+'$\n Possible prize on current attempt:'
+        number = parseInt(prompt('Choose a roulette pocket number from 0 to '+maxRandomNumber
+        +'\nAttemps left: '+attempts+'\nTotal prize: '+bank+'$\nPossible prize on current attempt:'
         +possiblePrizeWin+'$'))
     } else {
         return 0
@@ -78,7 +78,7 @@ function playGame() {
                 attempts = 3;
                 regretConfirm()
             } else {
-                alert('Thank you for your participation. Your prizeis:'+bank+'$');
+                alert('Thank you for your participation. Your prizeis: '+bank+'$');
                 maxRandomNumber = 8;
                 maxPrize = 100;
                 mediumPrize = 50;
@@ -91,7 +91,7 @@ function playGame() {
             alert('Wrong number, try again')
             attempts--
             if (attempts===0){
-                alert('Thank you for your participation. Your prizeis:'+bank+'$');
+                alert('Thank you for your participation. Your prizeis: '+bank+'$');
                 attempts = 3;
                 regretConfirm()
             }
