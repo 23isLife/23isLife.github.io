@@ -26,7 +26,7 @@ function randomNumber(min, max) {
 function regretConfirm() {
     let regret = confirm('Do you want to play a game?');
     if (regret === true) {
-        number = parseInt(prompt('Скажи мне номер?)))'))
+        number = parseInt(prompt('Скажи мне номер?))) у тебя '+attempts+' попытки'))
         return number
     } else {
         alert('You did not become a billionaire, but can.')
@@ -34,7 +34,7 @@ function regretConfirm() {
 }
 
 function userNumber() {
-    number = parseInt(prompt('Скажи мне номер?)))'))
+    number = parseInt(prompt('Угадаешь номер от 0 до 8?)))'))
     return number
 }
 
@@ -57,10 +57,10 @@ function playGame() {
     
         if (number===randomNumberValue) {
             winBank()
-            alert('da'+attempts+' '+bank)
+            alert('Да это он'+attempts+' '+bank)
             break
         } else {
-            alert('no')
+            alert('Нет не он')
             attempts--
             if (attempts===0){
                 alert('loh')
@@ -83,7 +83,7 @@ let minPrize = 25;
 let bank = 0;
 
 
-alert(randomNumberValue);
+// alert(randomNumberValue);
 regretConfirm()
 playGame()
 
