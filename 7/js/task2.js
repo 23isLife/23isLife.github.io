@@ -53,7 +53,7 @@ function winBank() {
 }
 
 function playGame() {
-    for (let index = 0; index < 2; index++) {
+    for (let index = 0; index < 3; index++) {
     
         if (number===randomNumberValue) {
             winBank()
@@ -61,8 +61,14 @@ function playGame() {
             break
         } else {
             alert('no')
-            userNumber()
             attempts--
+            if (attempts===0){
+                alert('loh')
+                break
+            }
+            userNumber()
+            
+            
         }
         
     }
