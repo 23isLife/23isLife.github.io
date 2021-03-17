@@ -1,32 +1,43 @@
 function breakFunk() {
     alert('You did not become a billionaire, but can.')
-
 }
 
 function winBank() {
     switch (attempts) {
-        case 3: 
+        case switchThird: 
             bank+=maxPrize
             break;
-        case 2:
+        case switchSecond:
             bank+=mediumPrize
             break;
-        case 1:
+        case switchFirst:
             bank+=minPrize
+            break;
+        default:
             break;
     }
 }
 
+function startValueAll() {
+    maxRandomNumber = startRandomNumber;
+    maxPrize = maxPrizeStart;
+    mediumPrize = mediumPrizeStart;
+    minPrize = minPrizeStart;
+    attempts = attemptsStart;
+}
+
 function possiblePrize() {
     switch (attempts) {
-        case 3: 
-            possiblePrizeWin=maxPrize
+        case switchThird: 
+            possiblePrizeWin = maxPrize
             break;
-        case 2:
-            possiblePrizeWin=mediumPrize
+        case switchSecond:
+            possiblePrizeWin = mediumPrize
             break;
-        case 1:
-            possiblePrizeWin=minPrize
+        case switchFirst:
+            possiblePrizeWin = minPrize
+            break;
+        default:
             break;
     }
 }
@@ -40,6 +51,7 @@ function randomNumber(min, max) {
 function regretConfirm() {
     if(again===false){
         regret = confirm('Do you want to play a game?');
+        startValueAll()
     }
     if (regret === true) {
         randomNumberValue = randomNumber(0,maxRandomNumber)
@@ -66,24 +78,20 @@ function userNumber() {
 }
 
 function playGame() {
-    for (let index = 0; index < 3; index++) {
+    for (let index = 0; index < forNumber; index++) {
         if (number===randomNumberValue) {
             winBank()
             again = confirm('Congratulation, you won!\nYour prize is: '+bank+'$.\nDo you want to continue?')
             if (again===true) {
-                maxRandomNumber += 4;
-                maxPrize *= 2;
-                mediumPrize *= 2;
-                minPrize *= 2;
-                attempts = 3;
+                maxRandomNumber += upRandomRange;
+                maxPrize *= upRange;
+                mediumPrize *= upRange;
+                minPrize *= upRange;
+                attempts = attemptsStart;
                 regretConfirm()
             } else {
                 alert('Thank you for your participation. Your prizeis: '+bank+'$');
-                maxRandomNumber = 8;
-                maxPrize = 100;
-                mediumPrize = 50;
-                minPrize = 25;
-                attempts = 3;
+                startValueAll()
                 regretConfirm()
             }
             break
@@ -92,7 +100,8 @@ function playGame() {
             attempts--
             if (attempts===0){
                 alert('Thank you for your participation. Your prizeis: '+bank+'$');
-                attempts = 3;
+                attempts = attemptsStart;
+                again = false;
                 regretConfirm()
             }
             userNumber()
@@ -101,6 +110,8 @@ function playGame() {
         
     }
 }
+
+
 
 let again = false;
 let regret;
@@ -114,7 +125,17 @@ let mediumPrize = 50;
 let minPrize = 25;
 let bank = 0;
 let possiblePrizeWin = 0;
-
+const upRandomRange = 4;
+const maxPrizeStart = 100;
+const mediumPrizeStart = 50;
+const minPrizeStart = 25;
+const attemptsStart = 3;
+const switchFirst = 1;
+const switchSecond = 2;
+const switchThird = 3;
+const upRange = 2;
+const startRandomNumber = 8;
+const forNumber = 3;
 
 regretConfirm()
 
