@@ -1,0 +1,137 @@
+/* START: Task 1 Styles */
+
+/* END: Task 1 Styles */
+
+/* START: Task 2 Styles */
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	margin: 0;
+}
+
+.container {
+	width: 400px;
+	max-width: 100%;
+}
+
+#task2 h2 {
+	margin: 0;
+}
+
+.form {
+	padding: 30px 40px;	
+}
+
+.form-control {
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.form-control label {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.form-control input {
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px;
+	width: 100%;
+}
+
+.form-control input:focus {
+	outline: 0;
+	border-color: #777;
+}
+
+.form-control.success input {
+	border-color: #2ecc71;
+}
+
+.form-control.error input {
+	border-color: #e74c3c;
+}
+
+.form-control label {
+	color: #ffffff;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form-control.error label {
+	visibility: visible;
+    background-color: #e74c3c;
+    padding: 10px;
+    width: 101%;
+}
+
+.form-control.success label {
+    color: #ffffff;
+	visibility: visible;
+    background-color: #1eff00;
+    padding: 10px;
+    width: 101%;
+}
+
+.form button {
+	background-color: #c4c2c5;
+	border: 2px solid #c0bfc0;
+	border-radius: 4px;
+	color: #fff;
+	display: block;
+	font-family: inherit;
+	font-size: 16px;
+	padding: 10px;
+	margin-top: 20px;
+	width: 100%;
+}
+
+
+/* END: Task 2 Styles */
+
+/* START: Task 3 Styles */
+#task3container {
+	position: fixed;
+    margin-top: 40px;
+    margin-left: -60px;
+	min-width: 600px;
+	min-height: 320px;
+	border: 1px black solid;
+	overflow: hidden;
+	cursor: pointer;
+    background-image: url(assets/court.png);
+    background-size:100%;
+}
+#thing {
+  position: relative;
+  width:40px;
+  height:40px;
+  left: 47%;
+  top: 140px;
+  background-image: url(assets/ball.png);
+  background-size:100%;
+  transition: left .5s cubic-bezier(.42,-0.3,.78,1.25), 
+			top .5s cubic-bezier(.42,-0.3,.78,1.25);
+}
+
+#scoreAll{
+ display: flex;
+ flex-direction: row;
+}
+
+#score {
+    margin-right: auto;
+}
+
+#score2{
+    margin-left: auto;
+}
+/* END: Task 3 Styles */

@@ -1,0 +1,69 @@
+#root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formButtons button {
+    margin-right: 16px;
+    margin-top: 7px;
+}
+
+#tweetItems div{
+    align-items: center;
+    margin-top: 10px;
+}
+
+#tweetItems h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#navigationButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navigationButtons button {
+    margin-right: 10px;
+}
+
+#list {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-top: 20px;
+    
+}
+
+#list button{
+    margin-bottom: 7px;
+}
+
+#list li {
+    margin-top: 10px;
+    list-style: none;
+}
+
+#list a {
+    margin-right: 70px;
+    margin-left: 0px;
+    text-decoration: none;
+    color: black;
+}
+
+#list a:hover{
+    color: rgba(0, 12, 179, 0.781);
+    font-size: 23px;
+}
+
+.unliked{
+    display: unset;
+}
+
+.unlikedOff{
+    display: none;
+}
