@@ -125,7 +125,7 @@ body{
 
 .img-section{
     display: flex;
-    min-width: 50%;
+    min-width: 80%;
     justify-content: center;
     align-items: center;
 }
@@ -167,6 +167,11 @@ body{
     box-shadow: 0 0 23px rgba(0,0,0,0.7);
     padding: 10px;
     margin: 15px;
+}
+
+.more div:hover, #button-section:hover{
+    background-color: rgba(75, 164, 187, 0.979);
+    transition: 1s ease-in-out;
 }
 
 .more div a{
@@ -211,6 +216,13 @@ body{
     text-shadow: 2px 2px rgb(158, 58, 58);
 }
 
+#projects h1{
+    animation: 1s ease-in-out 2s infinite alternate section_h1;
+    font-size: 5rem;
+    color: rgb(12, 58, 158);
+    text-shadow: 2px 2px rgb(26, 26, 41);
+}
+
 @media only screen and (max-width: 815px) {
     * {
         font-size: 70%;
@@ -227,4 +239,17 @@ body{
     .navbar-info a{
         font-size: 3rem;
     }
+}
+
+@keyframes section_h1 {
+    from {
+        font-size: 5rem;
+        color: rgb(12, 58, 158);
+        text-shadow: 2px 2px rgb(26, 26, 41); 
+         }
+    to {
+        font-size: 6rem;
+        color: rgb(17, 180, 202);
+        text-shadow: 2px 2px rgb(43, 43, 68);
+        }
 }
